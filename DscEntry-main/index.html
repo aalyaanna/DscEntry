@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Donasyon.PH</title>
+  <link rel="icon" href="img/Asset-2.ico" type="image/x-icon">
+  <script src="java.js"></script>
+</head>
+
+<body id="home" data-spy="scroll" data-target="#main-nav">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+    <div class="container">
+      <a href="#home" class="navbar-brand">
+        <img src="img/LOGO.svg" width="50" height="50" alt="">
+        <h3 class="d-inline align-middle" id="logo-text">Donasyon.PH</h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Donations" class="nav-link">Donations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="front" class="py-5">
+    <div class="primary-overlay text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <h1 class="display-2 mt-5 pt-5" id="headline">
+              <strong>Donate</strong> for a good cause.
+            </h1>
+            <p class="lead">We can't help everyone, but everyone can help somebody</p>
+          </div>
+          <div class="col-lg-6">
+
+
+            <div class="wrapper">
+              <div class="title">
+                Personal Information
+              </div>
+              <div class="form">
+                <div class="inputfield">
+                  <label>Name</label>
+                  <input type="text" class="input" id="name">
+                </div>
+                <div class="inputfield">
+                  <label>Email</label>
+                  <input type="text" class="input" id="email">
+                </div>
+                <div class="inputfield">
+                  <label>Contact No.</label>
+                  <input type="text" class="input" id="phone">
+                </div>
+                <div class="inputfield">
+                  <label>Address</label>
+                  <input type="text" class="input" id="address">
+                </div>
+                <div class="inputfield">
+                  <label>City</label>
+                  <input type="text" class="input" id="city">
+                </div>
+                <div class="title">
+                  Donation Type
+                </div>
+                <div class="inputfield">
+                  <label>Donation Type</label>
+                  <div id="donations" class="custom_select">
+                    <select onchange="changeStatus()" id="donate">
+                      <option value="#">Select</option>
+                      <option value="Cash">Cash</option>
+                      <option value="Food">Food</option>
+                      <option value="necessities">Other necessities</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inputfield" class="data" id="amount">
+                  <label>Amount</label>
+                  <input type="text" class="input" id="amount1"></input>
+                </div>
+                <div class="inputfield" class="data" id="Foodtype">
+                  <label>Food type</label>
+                  <input type="text" class="input" id="Foodtype1"></input>
+                </div>
+                <div class="inputfield" class="data" id="quantity1">
+                  <label>Quantity</label>
+                  <input type="text" class="input" id="quantity11"></input>
+                </div>
+                <div class="inputfield" class="data" id="necessity">
+                  <label>Other necessities</label>
+                  <input type="text" class="input" id="necessity1"></input>
+                </div>
+                <div class="inputfield" class="data" id="quantity2">
+                  <label>Quantity</label>
+                  <input type="text" class="input" id="quantity21"></input>
+                </div>
+                <div class="inputfield">
+                  <input type="submit" value="Donate" class="btn" onclick="submitForm()">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Donation" class="bg-dark text-white py-5">
+    <div class="container">
+
+    </div>
+  </section>
+
+  <section id="box" class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-primary pb-3">
+            Latest Donation Drives </h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="card-deck">
+              <div class="card">
+                <img src="img/ulysses pic.jpg" class="card-img-top" alt="Donation drive ulysses">
+                <div class="card-body">
+                  <h5 class="card-title">Typhoon Ulysses</h5>
+                  <p class="card-text">DonationPH delivered essential items on the people who are affected by the recent
+                    typhoon.</p>
+                  <p class="card-text"><small class="text-muted">Nov 12, 2020</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/kids-timeline.jpg" class="card-img-top" alt="Kids smiling on the camera">
+                <div class="card-body">
+                  <h5 class="card-title">Kids Charity Event</h5>
+                  <p class="card-text">Through the power of your donations. Children in need we're given out foods,
+                    clothes and other items for their needs.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/school-timeline.jpg" class="card-img-top" alt=" Kids waving at the camera.">
+                <div class="card-body">
+                  <h5 class="card-title">School Donation Drives</h5>
+                  <p class="card-text">DonationPH gave out school supplies for students in selected schools.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/covid-timeline.jpg" class="card-img-top" alt="Face masks and other items in a box">
+                <div class="card-body">
+                  <h5 class="card-title">Covid Donation Drive</h5>
+                  <p class="card-text">With the funds we received from donations, We're able to give out face masks and
+                    other items that would help frontliners to have supplies and be safe.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              Why Our Foundation </h1>
+            <p class="lead pb-3">
+              By donating at DonasyonPH, you are not just helping one person or one city, but countless people who
+              needed you're help and care.<br>
+              2020 has been a challenge for us in different aspects, on the other hand, there are countless people who
+              do not have anything that makes us want to help them for a better future.
+              We do not just work, but helps to encourage, protect, and support them in their lives.<br>
+              If our team, DonasyonPH, and you will work together, everyone can strive for happiness and fair life, as
+              well as a better future for our country.
+            </p>
+          </div>
+
+          <div id="col-bar">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse1" data-toggle="collapse" data-parent="#col-bar">
+                    <i class="fas fa-arrow-circle-down"></i> &nbsp;We are Trustworthy </div>
+                </h5>
+              </div>
+
+              <div id="collapse1" class="collapse show">
+                <div class="card-body">
+                  DonasyonPH is a trustworthy team that helps people in need.
+                  We do not have the authority to use your donations for our own desires and not even a single cent will
+                  be placed in our pockets.
+                  As well as that, DonasyonPH will use your donations directly to our donation drives and aims to
+                  provide relief/essential goods to lend a hand to those who needed help.
+                  Donating can give people a sense of hope through this act of kindness and generosity.
+                  Every peso donated from the heart is worthy of every utmost thanks.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse2" data-toggle="collapse" data-parent="#col-bar">
+                    <i class="fas fa-arrow-circle-down"></i> We serve
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse2" class="collapse">
+                <div class="card-body">
+                  We serve people because we all deserve to have a fair and better life, as well as to have a better
+                  future for our country.
+                  We serve to fight underprivileged life for the people who do not have the basic supplies that are
+                  needed in order to survive.
+                  We also serve to gave them what they needed and to have their life with happiness that they are also
+                  important.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse3" data-toggle="collapse" data-parent="#col-bar">
+                    <i class="fas fa-arrow-circle-down"></i> &nbsp; Our Goals </div>
+                </h5>
+              </div>
+
+              <div id="collapse3" class="collapse">
+                <div class="card-body">
+                  Our goal is to help, but not just to help but to protect, support, and encourage people who needed it
+                  for their better future.
+                  As well as to give their basic supplies needed to survive, like shelter, food, and water.
+                  Along with, preparing an emergency involves risk monitoring, planning, and establishing how to deliver
+                  assistance and protection.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Donations" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              Donations&nbsp;&nbsp; </h1>
+            <p class="lead">
+              Some Donations
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/pic1.png" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h5 class="text-muted donation-title">Feed the&nbsp;</h5>
+              <h3>Children & Homeless</h3>
+              <p>To provide daily proper food for the children who are in an orphanage as well as to the homeless.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#home" class="btn btn-primary btn-lg btn-block">
+                    <i class="fas fa-envelope-open-o"></i> Donate
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/pic2.png" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h5 class="text-muted donation-title">Donate to</h5>
+              <h3>Typhoon <br> victims</h3>
+              <p>To provide relief items, basic supplies, vital services, and life-saving emergency assistance.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#home" class="btn btn-primary btn-lg btn-block">
+                    <i class="fas fa-envelope-open-o"></i> Donate
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/pic3.png" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h5 class="text-muted donation-title">Help the&nbsp;</h5>
+              <h3>Students & Teachers</h3>
+              <p>To provide students and teachers who are underpriviledge an education assistance.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#home" class="btn btn-primary btn-lg btn-block">
+                    <i class="fas fa-envelope-open-o"></i> Donate
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/pic4.png" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h5 class="text-muted donation-title">Donate to</h5>
+              <h3>Covid-19 <br> safety</h3>
+              <p>To provide tools and equipments needed for covid-19 patients in the healthcare facilities.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="#home" class="btn btn-primary btn-lg btn-block">
+                    <i class="fas fa-envelope-open-o"></i> Donate
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3>Stay in touch with us...</h3>
+          <p class="lead">To stay updated to our current and forthcoming activities...&nbsp;&nbsp;</p>
+          <form>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user">&nbsp;</i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name" id="smName">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Email" id="smEmail">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+              </div>
+              <textarea class="form-control" placeholder="Message" rows="5" id="smMessage"></textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" onclick="submitMessage()">
+          </form>
+        </div>
+
+        <div class="col-lg-3 align-self-center">
+          <img src="img/LOGO-NAME.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12 ml-auto">
+          <p class="lead">
+            Copyright &copy;
+            <span id="year"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>bubbly({
+      colorStart: "#fff4e6",
+      colorStop: "#ffe9e4",
+      blur: 1,
+      compose: "source-over",
+      bubbleFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+    });;
+  </script>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $('#year').text(new Date().getFullYear());
+
+    $('body').scrollspy({ target: '#main-nav' });
+
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
